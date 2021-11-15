@@ -119,12 +119,9 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.12.5-x86_64-darwin)
       racc (~> 1.4)
-<<<<<<< HEAD
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
-=======
     orm_adapter (0.5.0)
->>>>>>> 582f7058a45185cb613895c62a45e63aaad14b50
     pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
