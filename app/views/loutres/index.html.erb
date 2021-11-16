@@ -1,10 +1,22 @@
-<h1>Vos résultats:</h1>
+<div class="container py-5">
+<h2>Vos résultats de recherche</h2>
 
-<ul>
-  <% @loutres.each do |loutre| %>
-  <li><%= loutre.image  %>
-      <%= loutre.name %>
-      <%= loutre.personality %>
-      <%= loutre.price %>
-  </li>
-</ul>
+<div class="container mt-5">
+  <div class="row">
+    <% @loutres.each do |loutre| %>
+      <div class="col-4">
+        <div class="card-loutre mb-4">
+          <%= image_tag(loutre.image) %>
+          <div class="card-loutre-infos">
+            <div>
+              <h2><%= loutre.name %></h2>
+              <p><%= loutre.personality %></p>
+            </div>
+            <h2><%= loutre.price %> € /jour</h2>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+</div>
