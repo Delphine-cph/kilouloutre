@@ -1,4 +1,17 @@
+.loutre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
 
+.link-no-deco {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+}
 
 .card-loutre {
   overflow: hidden;
