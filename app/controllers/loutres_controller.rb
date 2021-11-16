@@ -1,10 +1,11 @@
 class LoutresController < ApplicationController
 
   def index
-    @loutres = Loutre.all
+    @loutres = policy_scope(Loutre).order(created_at: :desc)
   end
 
   def show
     @loutre = Loutre.find(params[:id])
+    authorize @loutre
   end
 end

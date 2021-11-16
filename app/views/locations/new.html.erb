@@ -11,4 +11,8 @@
     <%= f.input :address %>
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
+
+<% if policy(Location).create? %>
+  <%= link_to "New location", new_loutre_location_path %>
+<% end %>
 </div>
