@@ -1,0 +1,15 @@
+ <%= simple_form_for([loutre, location]) do |f| %>
+ <p> Prix par jour :<%= @loutre.loutre_price %></span>€</p>
+ <%= f.input :date_arrive, label: "Date d'arrivée", as: :date, year_arrive: Date.today.year,
+                                                   date_arrive: Date.today + 1,
+                                                   end_year: Date.today.year + 5,
+                                                   order: [:day, :month, :year] %>
+
+<%= f.input :date_départ, label: "Date de départ", as: :date, date_arrive: Date.today.year,
+                                               date_départ: Date.today.year + 5,
+                                               order: [:day, :month, :year]  %>
+
+<%# <p><strong>Nombre de jours :</strong> <span id="days"></span></p>
+  <p><strong>Prix total : </strong><span id="price"></span> €</p>
+  <%= f.submit class: 'btn btn-primary', value: "Réserver" %>
+<% end %> %>
