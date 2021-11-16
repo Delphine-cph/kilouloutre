@@ -1,4 +1,14 @@
-<h2><%= @loutre.name %></h2>
-<p><%= @loutre.personality %></p>
-<p><%= @loutre.event %></p>
-<p><%= @loutre.price %></p>
+
+
+
+<div class="card-loutre-profile">
+  <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
+  <div class="">
+    <div>
+      <h2 class="text-danger"><%= @loutre.name %></h2>
+      <p><%= @loutre.personality %></p>
+      <p><%= @loutre.event %></p>
+    </div>
+    <h2 class="card-loutre-pricing"><p><%= @loutre.price %> €/jour</p></h2>
+  </div>
+</div>
