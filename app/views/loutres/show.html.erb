@@ -1,7 +1,7 @@
 <div class="container">
 
   <div class="text-center">
-    <h1><%= @loutre.name %></h1>
+    <h1><strong><%= @loutre.name %></strong></h1>
   </div>
 
   <div class="row">
@@ -9,9 +9,9 @@
       <div class="row">
         <img class="col-6" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
         <div class="col-6 descriptif">
-          <p> Propriétaire : <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
-          <p> Personalité : <%= @loutre.personality %></p>
-          <p> Activité : <%= @loutre.event %></p>
+          <p> <strong> Propriétaire :</strong> <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
+          <p> <strong>Personalité :</strong> <%= @loutre.personality %></p>
+          <p> <strong>Activité :</strong> <%= @loutre.event %></p>
           <p class="show-text"><%= @loutre.price %> €/jour </p>
         </div>
       </div>
