@@ -1,23 +1,21 @@
 <div class="container">
 
   <div class="text-center">
-    <h1><%= @loutre.name %> - Loutre pour les <%= @loutre.event %></h1>
+    <h1><%= @loutre.name %></h1>
   </div>
 
-  <div class="row align-items-center">
-    <div class="col-9 card-show ">
-      <div>
-          <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
-
-          <h2> ✔️ Loutre spécial <%= @loutre.event %></h2>
-          <h2> ✔️ Sa personalité : <%= @loutre.personality %></h2>
+  <div class="row">
+    <div class="col-12 card-show p-0">
+      <div class="row">
+        <img class="col-6" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
+        <div class="col-6 descriptif">
           <p> Propriétaire : <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
-
-          <p><%= @loutre.price %> €/jour </p>
+          <p> Personalité : <%= @loutre.personality %></p>
+          <p> Activité : <%= @loutre.event %></p>
+          <p class="show-text"><%= @loutre.price %> €/jour </p>
+        </div>
       </div>
     </div>
-    <div class="button-res text-center">
-    <p><%= link_to "Réserver", new_loutre_location_path(@loutre) %></p>
-    </div>
+      <%= link_to "Réserver", new_loutre_location_path(@loutre), class:"button-res text-center" %>
   </div>
 </div>
