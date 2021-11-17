@@ -1,6 +1,7 @@
 
 <div class="form-container">
-<%= simple_form_for loutres_path do |f| %>
+<div class="formulaire">
+<%= simple_form_for [@loutre, @location] do |f| %>
     <%= f.input :date_arrive, label: "Date de début", as: :date, start_year: Date.today.year,
                                                       date_arrive: Date.today + 1,
                                                       end_year: Date.today.year + 5,
@@ -12,4 +13,5 @@
     <%= f.input :address %>
     <%= f.submit class: "btn btn-primary" %>
 <% end %>
+</div>
 </div>
