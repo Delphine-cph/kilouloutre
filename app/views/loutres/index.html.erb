@@ -1,11 +1,25 @@
-<h1>Vos résultats:</h1>
+<div class="container py-5">
+  <div class="d-flex justify-content-between">
+    <h2>Vos résultats de recherche</h2>
+    <%= link_to "Retour", root_path, class: "btn btn-ghost" %>
+  </div>
 
-<ul>
-  <% @loutres.each do |loutre| %>
-  <li><%= loutre.image  %>
-      <%= loutre.name %>
-      <%= loutre.personality %>
-      <%= loutre.price %>
-  </li>
-  <% end %>
-</ul>
+  <div class="container mt-5">
+    <div class="loutre-grid">
+      <% @loutres.each do |loutre| %>
+        <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
+          <div class="card-loutre mb-4">
+            <%= image_tag(loutre.image) %>
+            <div class="card-loutre-infos">
+              <div>
+                <h2><%= loutre.name %></h2>
+                <p><%=  loutre.personality %></p>
+              </div>
+              <h2><%= loutre.price %> € /jour</h2>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

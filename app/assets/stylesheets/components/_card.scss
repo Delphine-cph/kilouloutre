@@ -1,29 +1,44 @@
-.card-trip {
+.loutre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+}
+
+.link-no-deco {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.card-loutre {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-loutre > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.card-loutre h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.card-loutre p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.card-loutre .card-loutre-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -31,9 +46,16 @@
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-loutre-infos .card-loutre-user {
   position: absolute;
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.card-show {
+  border: 1px solid grey;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.07);
 }
