@@ -15,6 +15,18 @@ class LocationsController < ApplicationController
     authorize @location
   end
 
+  def update
+    @location = Location.find(locations_params[:id])
+    @loutre = @location.loutre
+
+    if @location.update(locations_params)
+      redirect_to loutre_path(@loutre)
+      flash[:notice] = 'Votre louloutre a bien été réservé'
+    else
+      render :show
+    end
+  end
+
   private
 
   def loutre_params
