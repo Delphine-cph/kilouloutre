@@ -1,15 +1,15 @@
-<div class="d-flex align-items-center p-3 justify-content-center"style=" height: 600px; background-position: center; background-image: url('<%= image_path "loutre_grande_image" %>')">
+<div class="d-flex align-items-center p-3 justify-content-center"style=" height: 600px; background-position: center; background-image: url('<%= image_path "loutre_grande_image.jpg" %>')">
 
   <div class="bg-light p-3">
     <h1>Louer une Loutre</h1>
-    <button type="button" class="btn btn-primary" >Rece</button>
+    <%= link_to "Rece", loutres_path, class: "btn btn-primary"%>
   </div>
 </div>
 <h2 style="margin: 50px;">Des idées d’activitée avec votre Loutre</h2>
 
 <div class="d-flex justify-content-around" style="margin: 50px;">
   <div class="card" style="width: 18rem; border-radius: 10px; overflow:hidden">
-    <%= image_tag "loutre_boxe.jpeg" %>
+    <%= image_tag "loutre_boxe.jpg" %>
     <div class="card-body">
     <h5 class="card-title">Boxe</h5>
       <p class="card-text">Féru de boxe, vous pouvez emmener votre loutre à un combat de boxe </p>
@@ -33,7 +33,7 @@
   </div>
 
   <div class="card" style="width: 18rem;border-radius: 10px; overflow:hidden">
-    <%= image_tag "loutre_kids2.jpeg" %>
+    <%= image_tag "loutre_kids2.jpg" %>
     <div class="card-body">
     <h5 class="card-title">Garde d'enfant</h5>
       <p class="card-text">Résponsable et digne de confiance vous pouvez compter sur elle pour garder vos enfants </p>
