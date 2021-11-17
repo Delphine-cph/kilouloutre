@@ -6,6 +6,7 @@ class LoutresController < ApplicationController
 
   def show
     @loutre = Loutre.find(params[:id])
+    # @loutre.user = current_user
     authorize @loutre
   end
 end
