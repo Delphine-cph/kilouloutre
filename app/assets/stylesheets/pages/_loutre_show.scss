@@ -1,0 +1,45 @@
+.card-show {
+      height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-name {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+  margin-bottom: 18px;
+  background-color: rgb(41, 174, 184);
+}
+
+#otter-name {
+  padding-left: 10px;
+}
+
+#caractere {
+  padding-right: 10px;
+}
+.card-img {
+     justify-content: space-between;
+    display: flex;
+    height: 360px;
+    img {
+          width: 100%;
+    object-fit: cover;
+    }
+}
+
+.event {
+  margin: 12px;
+  margin-top: 120px;
+}
+
+.card-price {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-left: 12px;
+  background-color: rgb(41, 174, 184);
+
+}

@@ -1,14 +1,26 @@
-
-
-
-<div class="card-loutre-profile">
-  <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
-  <div class="">
-    <div>
-      <h2 class="text-danger"><%= @loutre.name %></h2>
-      <p><%= @loutre.personality %></p>
-      <p><%= @loutre.event %></p>
+<div class="container">
+  <div class="card-show">
+    <div class="card-name">
+      <div>
+        <h2 id="otter-name">Name: <%= @loutre.name %></h2>
+      </div>
+      <div id="caractere">
+        <p><%= @loutre.personality %></p>
+      </div>
     </div>
-    <h2 class="card-loutre-pricing"><p><%= @loutre.price %> €/jour</p></h2>
+    <div class="card-img">
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
+      <div class="event">
+        <p><%= @loutre.event %></p>
+      </div>
+    </div>
+    <div class="card-price">
+      <div>
+        <p><%=@loutre.user.last_name %></p>
+      </div>
+      <div>
+        <p><%= @loutre.price %> €/jour</p>
+      </div>
+    </div>
   </div>
 </div>
