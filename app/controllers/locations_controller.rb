@@ -10,6 +10,7 @@ class LocationsController < ApplicationController
     @location = Location.new(locations_params)
     @loutre = Loutre.find(params[:loutre_id])
     @location.loutre = @loutre
+    @location.user = current_user
     @location.save
     redirect_to loutre_path(@loutre)
     authorize @location
@@ -34,6 +35,6 @@ class LocationsController < ApplicationController
   end
 
   def locations_params
-    params.require(:location).permit(:date_arrive, :date_départ, :status, :user_id, :loutre_id)
+    params.require(:location).permit(:date_arrive, :date_départ, :address, :status, :user_id, :loutre_id)
   end
 end

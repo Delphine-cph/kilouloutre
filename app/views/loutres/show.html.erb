@@ -15,8 +15,12 @@
           <p><%= @loutre.price %> €/jour </p>
       </div>
     </div>
-    <div class="button-res text-center">
+    <% if Location.where(user: current_user, loutre: @loutre).first %>
+      <p>votre réservation a bien été prise en compte</p>
+    <% else %>
+      <div class="button-res text-center">
     <p><%= link_to "Réserver", new_loutre_location_path(@loutre) %></p>
     </div>
+    <% end %>
   </div>
 </div>
