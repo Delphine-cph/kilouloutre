@@ -31,10 +31,17 @@ puts 'create 10 loutres'
 CATEGORY = ["party", "travel", "restaurant"]
 PERSONALITY = ["angry", "happy"]
 
+images = ['https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F05.2F06.2F4943b0de-9d2b-46e1-b19b-b3a24407bc8f.2Ejpeg/1150x647/background-color/ffffff/focus-point/960%2C646/quality/70/des-scientifiques-tentent-de-decouvrir-pourquoi-les-loutres-jonglent-avec-des-pierres.jpg',
+   'https://cdn.pixabay.com/photo/2013/03/04/17/44/riesen-90026_1280.jpg',
+    'https://cdn.pixabay.com/photo/2019/07/24/13/25/otter-4360147_1280.jpg',
+    'https://cdn.pixabay.com/photo/2013/03/04/17/37/otter-90025_1280.jpg',
+    'https://cdn.pixabay.com/photo/2019/08/22/14/08/asian-short-clawed-otter-4423602__480.jpg',
+    'https://cdn.pixabay.com/photo/2014/06/09/12/30/otter-365371_1280.jpg']
+
 10.times do
   loutre = Loutre.new(
     name: Faker::Creature::Cat.name,
-    image: 'https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F05.2F06.2F4943b0de-9d2b-46e1-b19b-b3a24407bc8f.2Ejpeg/1150x647/background-color/ffffff/focus-point/960%2C646/quality/70/des-scientifiques-tentent-de-decouvrir-pourquoi-les-loutres-jonglent-avec-des-pierres.jpg',
+    image: images.sample,
     price: rand(50..100),
     event: CATEGORY.sample,
     personality: PERSONALITY.sample,
