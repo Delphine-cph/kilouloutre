@@ -3,7 +3,9 @@ class LocationsController < ApplicationController
   def new
     @location = Location.new
     @loutre = Loutre.find(params[:loutre_id])
+    @location.loutre = @loutre
     authorize @location
+    authorize @loutre
   end
 
   def create
@@ -12,8 +14,9 @@ class LocationsController < ApplicationController
     @location.loutre = @loutre
     @location.user = current_user
     @location.save
-    redirect_to loutre_path(@loutre)
     authorize @location
+    authorize @loutre
+    redirect_to loutre_path(@loutre)
   end
 
   def update
