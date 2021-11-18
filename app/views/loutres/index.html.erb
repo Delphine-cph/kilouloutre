@@ -20,10 +20,10 @@
       <% @loutres.each do |loutre| %>
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
           <div class="card-loutre mb-4">
-            <% if loutre.image %>
-              <%= cl_image_tag @loutre.photo.key, height: 300, width: 400, crop: :fill %>
+            <% if loutre.photo.attached? %>
+              <%= cl_image_tag loutre.photo.key, height: 300, width: 400, crop: :fill %>
             <% else  %>
-              <img src="app/assets/images/loutre_chasse.jpeg">
+              <%= image_tag('loutre_chasse.jpeg') %>
             <% end %>
             <div class="card-loutre-infos">
               <div>

@@ -36,5 +36,5 @@ end
   private
 
   def loutre_params
-    params.require(:loutre).permit(:name, :personality, :event, :price, :image)
+    params.require(:loutre).permit(:name, :personality, :event, :price, :photo,:image)
   end
