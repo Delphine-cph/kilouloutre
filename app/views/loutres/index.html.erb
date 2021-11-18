@@ -1,4 +1,5 @@
 <div class="container py-5">
+  <h2 class="title-index col m-10"><%= @loutres.count %> loutres disponibles</h2>
 <div class="container">
   <div class="row">
     <div class="mt-2 map-position col-5 pr-5">
@@ -11,8 +12,7 @@
     </div>
   </div>
   <div class="mt-2 mr-5 col-7 ml-100">
-    <h2 class="title-index col m-10"><%= @loutres.count %> loutres correspondant à votre recherche</h2>
-    <div class="loutre-grid mt-5">
+    <div class="loutre-grid mt-2">
       <% @loutres.each do |loutre| %>
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
           <div class="card-loutre mb-4">
