@@ -53,9 +53,8 @@
   width: 40px;
 }
 
-.card-show {
-  // border: 1px solid grey;
-  border-radius: 6px;
+.card-show-loutre {
+  border-radius: 12px;
   background-color: white;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
 }
@@ -68,4 +67,13 @@
 .show-text {
   text-align: right;
   padding-right: 12px;
+}
+
+.d-flex {
+  justify-content: space-between;
+}
+
+.show-name {
+    padding: 60px 50px 40px 30px;
+    text-align: right;
 }

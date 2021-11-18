@@ -1,14 +1,14 @@
 <div class="container">
 
-  <div class="text-center">
+  <div class="show-name">
     <h1><strong><%= @loutre.name %></strong></h1>
   </div>
 
-  <div class="row">
-    <div class="col-12 card-show p-0">
-      <div class="row">
-        <img class="col-6" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
-        <div class="col-6 descriptif">
+  <div class="d-flex">
+    <div class="card-show-loutre p-0">
+      <div class="d-flex">
+        <img class="show-image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
+        <div class="descriptif">
           <p> <strong> Propriétaire :</strong> <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
           <p> <strong>Personalité :</strong> <%= @loutre.personality %></p>
           <p> <strong>Activité :</strong> <%= @loutre.event %></p>
@@ -16,13 +16,12 @@
         </div>
       </div>
     </div>
-
-    <% if Location.where(user: current_user, loutre: @loutre).first %>
-      <p>votre réservation a bien été prise en compte</p>
-    <% else %>
-      <div class="button-res text-center">
-    <p><%= link_to "Réserver", new_loutre_location_path(@loutre) %></p>
+    <div class="formular">
+      <div class="form-container">
+        <div class="formulaire">
+          <%= render 'shared/form' %>
+        </div>
+      </div>
     </div>
-    <% end %>
   </div>
 </div>
