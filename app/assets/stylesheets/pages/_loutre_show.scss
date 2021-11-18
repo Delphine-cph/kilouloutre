@@ -41,5 +41,21 @@
   margin-top: 60px;
   margin-left: 12px;
   background-color: rgb(41, 174, 184);
+}
 
+.card-show-loutre {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+  width: 60%;
+}
+
+.show-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#new_location {
+  background-color: #1edd8861;
 }
