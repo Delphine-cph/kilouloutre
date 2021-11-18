@@ -30,3 +30,33 @@ object-fit: cover;
   font-weight: bold;
   font-size: 24px;
 }
+
+.idea-card {
+  font-weight: bold;
+  margin-top: 60px;
+  padding-left: 80px;
+}
+
+.opacity-text {
+  color: #21DBD0;
+  opacity: 0.7;
+  font-weight: bold;
+  padding-left: 80px;
+}
+
+.zoom {
+/* La transition s'applique à la fois sur la largeur et la hauteur, avec une durée d'une seconde. */
+-webkit-transition: all 1s ease; /* Safari et Chrome */
+-moz-transition: all 1s ease; /* Firefox */
+-ms-transition: all 1s ease; /* Internet Explorer 9 */
+-o-transition: all 1s ease; /* Opera */
+transition: all 1s ease;
+}
+.zoom:hover {
+/* L'image est grossie de 25% */
+-webkit-transform:scale(1.15); /* Safari et Chrome */
+-moz-transform:scale(1.15); /* Firefox */
+-ms-transform:scale(1.15); /* Internet Explorer 9 */
+-o-transform:scale(1.15); /* Opera */
+transform:scale(1.15);
+}
