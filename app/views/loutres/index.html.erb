@@ -1,13 +1,8 @@
 <div class="container py-5">
-  <div class="d-flex justify-content-between">
-    <h2 class="border-title2">Vos résultats de recherche</h2>
-    <%= link_to "Retour", root_path, class: "btn btn-ghost" %>
-  </div>
-
 <div class="container">
   <div class="row">
-    <div class=" map-position mt-5 col-5 pr-5">
-      <div style="width: 500px; height: 400px;"
+    <div class="mt-2 map-position col-5 pr-5">
+      <div style="width: 500px; height: 440px;"
         data-controller="mapbox"
         data-mapbox-markers-value="<%= @markers.to_json %>"
         data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
@@ -15,8 +10,9 @@
     </div>
     </div>
   </div>
-  <div class="mt-5 col-7 ml-100">
-    <div class="loutre-grid">
+  <div class="mt-2 mr-5 col-7 ml-100">
+    <h2 class="title-index col m-10"><%= @loutres.count %> loutres correspondant à votre recherche</h2>
+    <div class="loutre-grid mt-5">
       <% @loutres.each do |loutre| %>
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
           <div class="card-loutre mb-4">
@@ -35,6 +31,9 @@
           </div>
         <% end %>
       <% end %>
+    </div>
+    <div class="text-center">
+       <%= link_to "Retour", root_path, class: "btn btn-ghost" %>
     </div>
   </div>
 </div>
