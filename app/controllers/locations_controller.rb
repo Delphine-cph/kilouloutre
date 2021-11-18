@@ -31,6 +31,12 @@ class LocationsController < ApplicationController
     end
   end
 
+  # def accept
+
+  #   @location = Location.find(params[:id])
+  #   # @location.update
+  # end
+
   private
 
   def loutre_params
