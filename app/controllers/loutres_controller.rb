@@ -8,6 +8,12 @@ class LoutresController < ApplicationController
         info_window: render_to_string(partial: "info_window", locals: { loutre: loutre })
       }
     end
+
+    if params[:query].present?
+      @loutres = Loutre.where(event: params[:query])
+    else
+      @loutres = Loutre.all
+    end
   end
 
   def show
