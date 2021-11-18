@@ -25,13 +25,14 @@ puts 'create 5 users'
 end
 
 delphine = User.create!(email: "delphine@gmail.com", password: "delphine", first_name: "delphine", last_name: "cph", description: "blabla")
+delphine.admin = true
 mathieu = User.create!(email: "mathieu@gmail.com", password: "mathieu", first_name: "mathieu", last_name: "Rmn", description: "blabla")
-
+mathieu.admin = true
 
 puts 'create 8 loutres'
 
-CATEGORY = ["party", "travel", "restaurant"]
-PERSONALITY = ["angry", "happy"]
+CATEGORY = ["chasse", "garde d'enfant", "boxe"]
+PERSONALITY = ["joyeux", "ronchon"]
 
 images = ['https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgeo.2F2020.2F05.2F06.2F4943b0de-9d2b-46e1-b19b-b3a24407bc8f.2Ejpeg/1150x647/background-color/ffffff/focus-point/960%2C646/quality/70/des-scientifiques-tentent-de-decouvrir-pourquoi-les-loutres-jonglent-avec-des-pierres.jpg',
    'https://cdn.pixabay.com/photo/2013/03/04/17/44/riesen-90026_1280.jpg',
