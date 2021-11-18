@@ -4,7 +4,8 @@ class LoutresController < ApplicationController
     @markers = @loutres.geocoded.map do |loutre|
       {
         lat: loutre.latitude,
-        lng: loutre.longitude
+        lng: loutre.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { flat: flat })
       }
     end
   end
