@@ -5,8 +5,17 @@
   </div>
 
 <div class="container">
-<div class="row">
-  <div class="mt-5 col-7">
+  <div class="row">
+    <div class=" map-position mt-5 col-5 pr-5">
+      <div style="width: 500px; height: 400px;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="mt-5 col-7 ml-100">
     <div class="loutre-grid">
       <% @loutres.each do |loutre| %>
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
@@ -24,13 +33,4 @@
       <% end %>
     </div>
   </div>
-  <div class="mt-5 col-5 pr-5">
-    <div style="width: 500px; height: 600px;"
-      data-controller="mapbox"
-      data-mapbox-markers-value="<%= @markers.to_json %>"
-      data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
-  </div>
-  </div>
-</div>
 </div>

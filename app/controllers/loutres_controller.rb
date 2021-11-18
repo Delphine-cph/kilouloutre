@@ -5,7 +5,7 @@ class LoutresController < ApplicationController
       {
         lat: loutre.latitude,
         lng: loutre.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { flat: flat })
+        info_window: render_to_string(partial: "info_window", locals: { loutre: loutre })
       }
     end
   end

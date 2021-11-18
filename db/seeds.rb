@@ -38,6 +38,8 @@ images = ['https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-w
     'https://cdn.pixabay.com/photo/2019/08/22/14/08/asian-short-clawed-otter-4423602__480.jpg',
     'https://cdn.pixabay.com/photo/2014/06/09/12/30/otter-365371_1280.jpg']
 
+address = ["14 rue Crespin du Gast 75011 Paris", "106 rue vieille du temple 75003 Paris", "16 villa Gaudelet 75011 Paris"]
+
 10.times do
   loutre = Loutre.new(
     name: Faker::Creature::Cat.name,
@@ -45,7 +47,8 @@ images = ['https://geo.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-w
     price: rand(50..100),
     event: CATEGORY.sample,
     personality: PERSONALITY.sample,
-    user: delphine
+    user: delphine,
+    address: address.sample
   )
   loutre.save!
 end
