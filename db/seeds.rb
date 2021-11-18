@@ -24,10 +24,8 @@ puts 'create 5 users'
   user.save!
 end
 
-delphine = User.create!(email: "delphine@gmail.com", password: "delphine", first_name: "delphine", last_name: "cph", description: "blabla")
-delphine.admin = true
-mathieu = User.create!(email: "mathieu@gmail.com", password: "mathieu", first_name: "mathieu", last_name: "Rmn", description: "blabla")
-mathieu.admin = true
+delphine = User.create!(email: "delphine@gmail.com", password: "delphine", first_name: "delphine", last_name: "cph", description: "blabla", admin: true)
+mathieu = User.create!(email: "mathieu@gmail.com", password: "mathieu", first_name: "mathieu", last_name: "Rmn", description: "blabla", admin: true)
 
 puts 'create 8 loutres'
 
