@@ -16,9 +16,13 @@
               </div>
               <h2><%= location.loutre.price %> € /jour</h2>
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button type="button" class="btn btn-success"><%= link_to "validé", accept_location_path(location) %></button>
-
-                <button type="button" class="btn btn-danger">No</button>
+                <% if location.status == false %>
+                  <button type="button" class="btn btn-success">
+                  <%= link_to "validé", accept_location_path(location), method: :post %></button>
+                  <button type="button" class="btn btn-danger">No</button>
+                <% else %>
+                  <p>validé</p>
+                <% end %>
               </div>
             </div>
           </div>

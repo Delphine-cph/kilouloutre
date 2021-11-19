@@ -22,7 +22,6 @@ class LocationsController < ApplicationController
   def update
     @location = Location.find(locations_params[:id])
     @loutre = @location.loutre
-
     if @location.update(locations_params)
       redirect_to loutre_path(@loutre)
       flash[:notice] = 'Votre louloutre a bien été réservé'
@@ -31,11 +30,13 @@ class LocationsController < ApplicationController
     end
   end
 
-  # def accept
+  def accept
 
-  #   @location = Location.find(params[:id])
-  #   # @location.update
-  # end
+    @location = Location.find(params[:id])
+    @location.update(status: true)
+    authorize @location
+    redirect_to dashboard_path(active:"locations")
+  end
 
   private
 
