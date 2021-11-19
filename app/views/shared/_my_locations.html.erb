@@ -2,7 +2,11 @@
     <div class="loutre-grid card_location">
       <% @locations.each do |location| %>
           <div class="card-loutre mb-4">
-            <%= image_tag(location.loutre.image) %>
+             <% if location.loutre.photo.attached? %>
+              <%= cl_image_tag(location.loutre.photo.key) %>
+            <% else %>
+              <%= image_tag('loutre_boxe.jpg') %>
+            <% end %>
             <div class="card-loutre-infos">
               <div>
                 <h2><%= location.loutre.name %></h2>

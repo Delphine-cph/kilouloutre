@@ -3,7 +3,11 @@
       <% @loutres.each do |loutre| %>
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
           <div class="card-loutre mb-4">
-            <%= image_tag(loutre.image) %>
+            <% if loutre.photo.attached? %>
+              <%= cl_image_tag(loutre.photo.key) %>
+            <% else %>
+              <%= image_tag('loutre_boxe.jpg') %>
+            <% end %>
             <div class="card-loutre-infos">
               <div>
                 <h2><%= loutre.name %></h2>
