@@ -4,7 +4,6 @@
         <%= link_to loutre_path(loutre), class: "link-no-deco" do %>
           <div class="card-loutre mb-4">
              <img class="show-image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
-            <%# <%= image_tag(loutre.image) %>
             <div class="card-loutre-infos">
               <div>
                 <h2><%= loutre.name %></h2>
@@ -12,9 +11,6 @@
               </div>
             </div>
           </div>
-          <%= @locations.each do |location| %>
-            <h2><%= location.loutre.total_price %></h2>
-          <%end%>
         <% end %>
       <% end %>
     </div>
