@@ -1,0 +1,34 @@
+<h1 class="form-title text-center mt-5"><strong>Fiche d'inscription</strong></h1>
+
+<div class="container formular">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-3">
+      <div class="form-horizontal">
+  <%= simple_form_for @loutre do |f| %>
+    <%= f.error_notification %>
+    <div class="form-group">
+      <div class="form-boite">
+        <h3 class="text-center mb-5">Proposer votre loutre</h3>
+        <%= f.input :name, label: "Nom de la loutre" %>
+        <%= f.input :personality, label: "Quel est le caractère de votre loutre"%>
+        <%= f.input :event, label: "A quel type d'événement votre loutre peut participer" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-boite">
+        <h3 class="text-center">Quelques infos sur votre annonce</h3>
+          <%= f.input :price, label: "Tarif de votre loutre " %>
+      </div>
+
+    </div>
+    <div>
+      <%= f.input :photo, as: :file, label: "Ajouter votre photo" %>
+      <%= f.button :submit, class: "btn btn-primary", value: "Ajouter" %>
+    </div>
+  <% end %>
+</div>
+
+    </div>
+  </div>
+</div>
