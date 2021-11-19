@@ -1,4 +1,4 @@
-<h1 class="form-title text-center">Fiche d'inscription</h1>
+<h1 class="form-title text-center mt-5"><strong>Fiche d'inscription</strong></h1>
 
 <div class="container formular">
   <div class="row">
@@ -8,7 +8,7 @@
     <%= f.error_notification %>
     <div class="form-group">
       <div class="form-boite">
-        <h3 class="text-center">Proposer votre loutre</h3>
+        <h3 class="text-center mb-5">Proposer votre loutre</h3>
         <%= f.input :name, label: "Nom de la loutre" %>
         <%= f.input :personality, label: "Quel est le caractère de votre loutre"%>
         <%= f.input :event, label: "A quel type d'événement votre loutre peut participer" %>
@@ -22,8 +22,8 @@
       </div>
 
     </div>
-    <div class="text-center">
-      <%= f.input :photo, as: :file, label: "ajouter votre photo" %>
+    <div>
+      <%= f.input :photo, as: :file, label: "Ajouter votre photo" %>
       <%= f.button :submit, class: "btn btn-primary", value: "Ajouter" %>
     </div>
   <% end %>
