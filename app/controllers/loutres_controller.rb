@@ -36,7 +36,7 @@ class LoutresController < ApplicationController
     authorize @loutre
     @loutre.save!
     flash[:notice] = 'Votre annonce a bien été enrengistrée.'
-    redirect_to @loutrex
+    redirect_to @loutre
   end
 end
 
