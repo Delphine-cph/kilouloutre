@@ -11,8 +11,8 @@
               <div>
                 <h2><%= location.loutre.name %></h2>
                 <p><%= location.user.first_name %></p>
-                <p><%= (location.date_arrive - location["date_départ"]).to_i %> jour(s)</p>
-                <p><%= (location.date_arrive - location["date_départ"]).to_i *  location.loutre.price %> € </p>
+                <p><%= (location["date_départ"] - location.date_arrive).to_i %> jour(s)</p>
+                <p><%= (location["date_départ"] - location.date_arrive).to_i *  location.loutre.price %> € </p>
               </div>
               <h2><%= location.loutre.price %> € /jour</h2>
               <div class="btn-group" role="group" aria-label="Basic mixed styles example">
