@@ -4,18 +4,17 @@
     <h1><strong><%= @loutre.name %></strong></h1>
   </div>
 
-  <div class="d-flex">
-    <div class="card-show-loutre p-0">
-      <div class="d-flex">
-        <img class="show-image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagNt1OWs7j_3WxkSxDpVxffe7OsfM2U_0dQ&usqp=CAU/>
-        <div class="descriptif">
-          <p> -Propriétaire : <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
-          <p> -Personalité : <%= @loutre.personality %></p>
-          <p> -Activité : <%= @loutre.event %></p>
-          <p class="show-text"><%= @loutre.price %> €/jour </p>
-        </div>
-      </div>
-    </div>
+<div class="card-product">
+  <%= image_tag @loutre.photo, class: "image-show"%>
+  <div class="card-product-infos">
+    <h2> <strong>Personnalité</strong> : <%= @loutre.personality %></h2>
+    <h2> <strong>Activité</strong> :<%= @loutre.event %></h2>
+    <h2><%= @loutre.price %> €/jour </h2>
+    <p><strong>Propriétaire</strong> : <%=@loutre.user.first_name.capitalize %> <%=@loutre.user.last_name.capitalize%></p>
+  </div>
+</div>
+
+
     <div class="formular">
       <div class="form-container">
         <div class="formulaire">
@@ -25,4 +24,3 @@
     </div>
   </div>
 </div>
-
