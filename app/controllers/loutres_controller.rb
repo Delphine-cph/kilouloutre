@@ -34,11 +34,9 @@ class LoutresController < ApplicationController
   def create
     @loutre = current_user.loutres.new(loutre_params)
     authorize @loutre
-    if @loutre.save!
-      flash[:notice] = 'Votre annonce a bien été enrengistrée.'
-    else
-      render :new
-    end
+    @loutre.save!
+    flash[:notice] = 'Votre annonce a bien été enrengistrée.'
+    redirect_to @loutrex
   end
 end
 
