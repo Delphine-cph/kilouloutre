@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   def dashboard
     @loutres = policy_scope(Loutre).where(user: current_user)
     @locations = Location.where(user: current_user)
-
+    @loutre = Loutre.new
   end
 end
