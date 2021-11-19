@@ -35,6 +35,7 @@ class LoutresController < ApplicationController
     @loutre = current_user.loutres.new(loutre_params)
     authorize @loutre
     if @loutre.save!
+      redirect_to dashboard_path
       flash[:notice] = 'Votre annonce a bien été enrengistrée.'
     else
       render :new
@@ -45,5 +46,5 @@ end
   private
 
   def loutre_params
-    params.require(:loutre).permit(:name, :personality, :event, :price, :photo,:image)
+    params.require(:loutre).permit(:name, :personality, :event, :price, :photo, :image)
   end
