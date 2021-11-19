@@ -20,4 +20,8 @@ class LocationPolicy < ApplicationPolicy
   def destroy?
     record.user == user
   end
+
+  def accept?
+    return true
+  end
 end
