@@ -1,7 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "loutre_grande_image.jpg" %>);">
 </div>
 
-
+<div>
   <ul class="nav nav-pills mb-5s button_dashboard" id="pills-tab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link <%= "active" if params[:active] != "locations"   %>" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Mes Loutres</button>
@@ -10,7 +10,7 @@
       <button class="nav-link <%= "active" if params[:active] == "locations"   %>" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Mes locations</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Message</button>
+      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Nouvelle Loutre ?</button>
     </li>
   </ul>
   <div class="tab-content" id="pills-tabContent">
@@ -20,5 +20,7 @@
     <div class="tab-pane fade <%= "show active" if params[:active] == "locations"   %>" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
       <%= render 'shared/my_locations' %>
     </div>
-    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+      <%= render 'shared/loutre_form' %>
+    </div>
   </div>
