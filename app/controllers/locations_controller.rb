@@ -13,11 +13,12 @@ class LocationsController < ApplicationController
     @loutre = Loutre.find(params[:loutre_id])
     @location.loutre = @loutre
     @location.user = current_user
-    @location.price = location_price(@location)
+    @location.total_price = location_price(@location)
     @location.save
     authorize @location
     authorize @loutre
     redirect_to loutre_path(@loutre)
+    flash[:notice] = 'Votre louloutre a bien été réservé'
   end
 
   def update
